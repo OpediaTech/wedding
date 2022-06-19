@@ -1,0 +1,6 @@
+new WOW().init();
+
+var swiper=new Swiper(".hero__swiper__banner",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev",},loop:!0,autoplay:{delay:3500,disableOnInteraction:!1,},speed:1000});$(window).scroll(function(){if(this.scrollY>845){$('.menu__section').addClass("sticky")}else{$('.menu__section').removeClass("sticky")}
+if(this.scrollY>500){$('.scroll-up-btn').addClass("show")}else{$('.scroll-up-btn').removeClass("show")}});$('.scroll-up-btn').click(function(){$('html').animate({scrollTop:0});$('html').css("scrollBehavior","auto")});var swiper=new Swiper(".story__swiper",{navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev",},loop:!0,spaceBetween:-1,autoplay:{delay:2500,disableOnInteraction:!1,},speed:1000,pagination:{el:".swiper-pagination",clickable:!0,},});$(".menu__bar").click(function(){$(".mobile__menu").addClass("open")})
+$(".mobile__menubar").click(function(){$(".mobile__menu").removeClass("open")})
+$(".coundown__inner").countdown("2022/06/01",function(event){$('#day').text(event.strftime('%D'));$('#hours').text(event.strftime('%H'));$('#minutes').text(event.strftime('%M'));$('#seconds').text(event.strftime('%S'))});$('.gallerys').magnificPopup({type:'image',delegate:'a',gallery:{enabled:!0},})
